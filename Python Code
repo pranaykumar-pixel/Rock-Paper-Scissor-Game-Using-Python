@@ -1,0 +1,19 @@
+import random
+choices = ["rock", "paper", "scissor"]
+computer = random.choice(choices)
+user = input("enter rock, paper, and scissor :")
+if user not in choices:
+    print("invalid choices!")
+else:
+    print (f" your choice : {user}")
+    print (f" computer choice : {computer}")
+if user == computer:
+    print ("it's a tie")
+elif (
+    (user == "rock" and computer == "scissor") or
+    (user == "paper" and computer == "rock") or
+    (user == "scissor" and computer == "paper")
+    ):
+        print ("you wins")
+else:
+    print ("computer wins")
