@@ -2,96 +2,134 @@
 
 ## Introduction
 
-This is a simple Rock Paper Scissors game created using Python. The game allows the user to choose between rock, paper, and scissor. The computer randomly selects one of the three choices, and the program compares both choices to determine the winner.
+This is a simple Rock Paper Scissors game developed using Python. In this game, the user plays against the computer. The computer randomly selects one option from rock, paper, or scissor, and the user enters their choice.
 
-This project was created as a beginner-level Python project to practice basic programming concepts such as user input, conditional statements, lists, and random selection.
+The program compares both choices and determines whether the user wins, the computer wins, or the game is a tie.
 
-## How the Game Works
-
-The game follows the standard rules of Rock Paper Scissors:
-
-* Rock beats Scissor
-* Scissor beats Paper
-* Paper beats Rock
-* If both the user and computer choose the same option, the game is a tie.
-
-The computer's choice is generated randomly using Python's `random` module.
-
-## Tools and Technologies Used
-
-* Python
-* Python `random` module
-* Conditional statements (`if`, `elif`, `else`)
-* Lists
-* User input
-* String formatting using f-strings
+The player can also choose to play multiple rounds.
 
 ## Features
 
 * User can choose rock, paper, or scissor.
-* Computer makes a random choice.
+* Computer randomly selects a choice.
 * The program checks whether the user's input is valid.
-* The user's and computer's choices are displayed.
-* The program determines whether the user wins, loses, or gets a tie.
-* Simple command-line interface.
+* The program determines the winner.
+* The game displays the choices made by both the user and computer.
+* The player can play again after each round.
+* The game ends when the player chooses not to continue.
 
-## Concepts Practiced
+## Technologies Used
 
-This project helped me practice the following Python concepts:
+* Python 3
+* Python Random module
 
-1. Importing and using a Python module.
-2. Creating and using lists.
-3. Taking input from the user.
-4. Using `random.choice()` to select a random value.
-5. Using `if`, `elif`, and `else` statements.
-6. Using logical operators such as `and` and `or`.
-7. Using f-strings to display output.
-8. Handling invalid user input.
+No external libraries are required for this project.
 
-## Example Output
+## How the Game Works
 
-```text
-enter rock, paper, and scissor : rock
-your choice : rock
-computer choice : paper
-computer wins
+The program first creates a list containing three choices:
+
+```python
+choices = ["rock", "paper", "scissor"]
 ```
 
-Another possible result:
+The computer randomly selects one choice using the `random.choice()` function.
+
+The user is then asked to enter their choice.
+
+The program checks the user's input. If the input is not rock, paper, or scissor, it displays an invalid choice message.
+
+If the input is valid, the program compares the user's choice with the computer's choice and determines the result.
+
+The player is then asked whether they want to play again. If they enter "yes", a new game starts. Otherwise, the program ends.
+
+## Game Rules
+
+* Rock beats Scissor.
+* Scissor beats Paper.
+* Paper beats Rock.
+* If both players choose the same option, the result is a tie.
+
+## Project Structure
 
 ```text
-enter rock, paper, and scissor : scissor
-your choice : scissor
-computer choice : paper
-you wins
+Rock-Paper-Scissors/
+│
+├── rock_paper_scissors.py
+└── README.md
 ```
 
-If both choices are the same:
+## How to Run the Project
+
+First, make sure Python 3 is installed on your computer.
+
+Check the Python version using:
+
+```bash
+python --version
+```
+
+Run the program using:
+
+```bash
+python rock_paper_scissors.py
+```
+
+## Example
 
 ```text
-enter rock, paper, and scissor : paper
-your choice : paper
-computer choice : paper
-it's a tie
+Enter rock, paper, or scissor: rock
+
+Your choice: rock
+Computer choice: scissor
+
+You win!
+
+Do you want to play again? (yes/no): yes
+
+Enter rock, paper, or scissor: paper
+
+Your choice: paper
+Computer choice: paper
+
+It's a tie!
+
+Do you want to play again? (yes/no): no
+
+THANKS FOR PLAYING!
 ```
 
-## Result
+## Python Concepts Used
 
-The Rock Paper Scissors game successfully takes the user's choice, generates a random choice for the computer, compares both choices, and displays the result.
+This project helped me practice some basic Python concepts, including:
 
-This project demonstrates how basic Python programming concepts can be combined to create a simple interactive game.
+* Variables
+* Lists
+* User input
+* Conditional statements
+* While loops
+* String methods
+* The random module
+* Comparison operators
+* Basic program logic
 
 ## Future Improvements
 
 The project can be improved by adding:
 
-* Multiple rounds.
-* A score system for the user and computer.
-* An option to play again without restarting the program.
-* Better input handling for uppercase and lowercase letters.
-* A graphical user interface.
-* A more user-friendly menu.
+* A score system to keep track of wins and losses.
+* A player name.
+* Different difficulty levels.
+* A graphical user interface using Tkinter.
+* A web version using Flask or Streamlit.
+* Statistics showing the number of wins, losses, and ties.
 
-## Conclusion
+## Author
 
-This project is a basic implementation of the Rock Paper Scissors game using Python. It was useful for understanding how conditional logic, user input, lists, and random values work together in a small programming project.
+Edakula Pranay Kumar
+
+This project was created as a beginner Python project to practice programming concepts and conditional logic.
+
+## License
+
+This project is created for educational and learning purposes.
